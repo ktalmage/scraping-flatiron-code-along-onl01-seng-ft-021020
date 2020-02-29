@@ -11,6 +11,7 @@ class Scraper
   
   def print_courses
     self.make_courses
+    binding.pry
     Course.all.each do |course|
       if course.title && course.title != ""
         puts "Title: #{course.title}"
@@ -35,5 +36,5 @@ class Scraper
 end
 
 Scraper.new.print_courses
-binding.pry
-true
+
+#true
